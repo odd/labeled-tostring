@@ -12,6 +12,8 @@ class Project(info: ProjectInfo) extends DefaultProject(info) {
   val sourceArtifact = Artifact.sources(artifactID)
   override def packageToPublishActions = super.packageToPublishActions ++
     Seq(packageSrc)
+
+
   
   //managed dependencies from built-in repositories
   val scalaTest = "org.scalatest" % "scalatest" % "1.3"
